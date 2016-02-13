@@ -255,8 +255,6 @@ var onValentine = function(){
 	
 	var dateToday = new Date();
 
-	dateToday.setDate( 14 );
-
 	var month = dateToday.getMonth() + 1;
 	var day = dateToday.getDate();
 
