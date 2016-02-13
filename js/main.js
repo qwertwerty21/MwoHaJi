@@ -1,7 +1,11 @@
 var arrayOfPossOpt = [];
 
 var arrayofPossImg = [
+<<<<<<< HEAD
 "img/img1.jpg",
+=======
+"img/img1.JPG",
+>>>>>>> 7100965c22d7ede6804800d71f8fcedfe3369dfc
 "img/img2.JPG",
 "img/img3.JPG",
 "img/img4.JPG",
@@ -250,7 +254,9 @@ var updateAudioSrc = function( ogg, mp3 ){
 var onValentine = function(){
 	
 	var dateToday = new Date();
+
 	dateToday.setDate(14);
+
 	var month = dateToday.getMonth() + 1;
 	var day = dateToday.getDate();
 
