@@ -106,6 +106,7 @@ textarea {
 
 div.jumbotron{
     background-color: #DDA448;
+    width: 100%;
 }
 
 .jumbotron a, .jumbotron img{
