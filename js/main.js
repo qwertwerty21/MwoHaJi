@@ -90,6 +90,10 @@ var onEnterBtn = function(){
 		//set src op if opactive else get random img
 		if( onePunchActive === true ){
 			newImg.src = "img/op.png"
+
+			if( valentines === true ){
+				newImg.src = "img/ppval.png"
+			}
 		}
 		else{
 			newImg.src = getRandomImg();
@@ -254,8 +258,6 @@ var updateAudioSrc = function( ogg, mp3 ){
 var onValentine = function(){
 	
 	var dateToday = new Date();
-
-	dateToday.setDate(14);
 
 	var month = dateToday.getMonth() + 1;
 	var day = dateToday.getDate();
