@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div id="opSwitchGif" class="op-switch-gif img-responsive hidden">
+            <img src="img/opswitchgif.gif" alt="One Punch Man punch!">
+        </div>
+        <div id="hideGif">
+            <audio loop autoplay id="bgmPlayer">
+                <source src="sounds/tomjones.ogg" type="audio/ogg" id="oggSrc">
+                <source src="sounds/tomjones.mp3" type="audio/mpeg" id="mp3Src">
+                Your browser does not support audio!
+            </audio>
+
+            <button type="button" id="bgmBtn" class="bgm-btn btn btn-success">
+                <span class="glyphicon glyphicon-volume-off"></span>
+            </button>
+
+            <div class="jumbotron text-center">
+
+                <h1 class="text-primary">
+                    <a href="#" id="onePunch"><img src="img/headimg.jpg" alt="What should I do?"></a>
+                    Mwo Ha Ji?
+                </h1>
+                <h5>*~For Christina~*</h5>
+            </div>    
+
+            <div class="container-fluid">
+
+                <div id="enterPossOptTextSect" class="text-center enter-poss-text-sect">
+                    <label for="enterPossOptText">Enter Possible Option:</label>
+                    <input type="text" name="enterPossOptName" id="enterPossOptText" maxlength="24">
+                    <input type="button" name="enterPossOptBtnName" id="enterPossOptBtn" class="btn btn-info" value="Enter">
+                </div>
+
+                <div id="possOptListSect" class="text-center">
+                    <ul id="possOptList">
+
+                    </ul>
+
+                    <div id="chooseBtnSect">
+                        <input type="button" name="chooseBtnName" id="chooseBtn" class="btn btn-primary btn-block" value="Choose!">
+                    </div>
+
+                </div>
+
+                <div id="suggestModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!--actual modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <img src="img/modalimg.jpg" alt="Hmmm...thinking...">
+                                <h4>Hmmmm...How about this?</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div id="suggestionSect" class="text-center">
+                                    <h2 id="suggestText"></h2>
+                                </div> 
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-block btn-warning okay-done" data-dismiss="modal">Got it, broh.</button>
+                                <button type="button" id="retry" class="try-again btn btn-warning btn-block">Meh, not feeling it..</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>

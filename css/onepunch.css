@@ -1,0 +1,223 @@
+
+/*FONTS*/
+@font-face {
+    font-family: 'east-west_italicitalic';
+    src: url('fonts/eastwestital-webfont.woff2') format('woff2'),
+    url('fonts/eastwestital-webfont.woff') format('woff'),
+    url('fonts/eastwestital-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Changes to body*/
+
+.bgm-btn{
+    display: none;
+}
+
+div.jumbotron{
+    background-color: #100B00;
+    background: url('../img/opbg.jpg');
+    -webkit-animation: sidescroll 60s linear infinite;
+    -moz-animation: sidescroll 60s linear infinite;
+    animation: sidescroll 60s linear infinite;
+}
+
+@-webkit-keyframes sidescroll{
+  0%{
+     background-position: 0 0;
+ }
+ 100%{
+     background-position: 1920px 0;
+ }
+}
+
+@-moz-keyframes sidescroll{
+  0%{
+     background-position: 0 0;
+ }
+ 100%{
+     background-position: 1920px 0;
+ }
+}
+
+@keyframes sidescroll{
+  0%{
+     background-position: 0 0;
+ }
+ 100%{
+     background-position: 1920px 0;
+ }
+}
+
+.jumbotron img{
+    display: none;
+}
+
+.jumbotron .text-primary{
+    color: #B80C09;
+    font-family: 'east-west_italicitalic';
+    font-size: 6em;
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+}
+
+.jumbotron h5{
+    color: #ffffff;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1.5em;
+    font-style: italic;
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+}
+
+html, body, .container-fluid{
+	background-color: #790400;
+  z-index: -1;
+}
+
+html:hover, body:hover{
+  cursor: crosshair;
+}
+
+.enter-poss-text-sect{
+    color: #100B00;
+    font-family: 'east-west_italicitalic';
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+}
+
+.enter-poss-text-sect input[type=text], .enter-poss-text-sect label{
+    cursor: crosshair;
+}
+
+.enter-poss-text-sect input[type=button]{
+  background-color: #B80C09;
+  cursor: crosshair;
+  font-family: 'east-west_italicitalic';
+}
+
+.enter-poss-text-sect input[type=button]:hover{
+  background-color: #a00a08;
+}
+
+li{ 
+  border-radius: 0%;
+  color: #fff;
+  display: block;
+  font-family: 'east-west_italicitalic';
+  font-size: 3em;
+  list-style: none;
+}
+
+.col-xs-6 img{
+    -webkit-animation: shakeit .6s linear infinite;
+    -moz-animation: shakeit .6s linear infinite;
+    animation: shakeit .6s linear infinite;
+}
+
+    .col-xs-6 img:hover{
+        -webkit-animation: shakeit .1s linear infinite;
+        -moz-animation: shakeit .1s linear infinite;
+        animation: shakeit .1s linear infinite;
+    }
+
+@-webkit-keyframes shakeit {
+    0% { -webkit-transform: translate(4px, 3px) rotate(0deg); }
+    10% { -webkit-transform: translate(-5px, -3px) rotate(-2deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(4deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(2deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(-3deg); }
+    50% { -webkit-transform: translate(-5px, 6px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-7px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(-1px, 1px) rotate(-5deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(4deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@-moz-keyframes shakeit {
+    0% { -webkit-transform: translate(4px, 3px) rotate(0deg); }
+    10% { -webkit-transform: translate(-5px, -3px) rotate(-2deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(4deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(2deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(-3deg); }
+    50% { -webkit-transform: translate(-5px, 6px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-7px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(-1px, 1px) rotate(-5deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(4deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes shakeit {
+    0% { -webkit-transform: translate(4px, 3px) rotate(0deg); }
+    10% { -webkit-transform: translate(-5px, -3px) rotate(-2deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(4deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(2deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(-3deg); }
+    50% { -webkit-transform: translate(-5px, 6px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-7px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(-1px, 1px) rotate(-5deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(4deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.btn-block{
+    font-family: 'east-west_italicitalic';
+}
+
+.btn-block:hover{
+	cursor: crosshair;
+}
+
+.modal-header{
+    background-color: #100B00;
+}
+
+.modal-header img{
+    border-radius: 0%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+}
+
+.modal-header h4{
+    color: #000000;
+    font-family: 'east-west_italicitalic';
+    font-size: 2em;
+    text-align: center;
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+}
+
+.modal-body{
+    background-color: #790400;
+    font-family: 'east-west_italicitalic';
+}
+
+.modal-body h2{
+    color: #100B00;
+}
+
+.modal-footer{
+    background-color: #100B00;
+}
+
+.modal-footer .okay-done{
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+
+.modal-footer .okay-done:hover{
+    background-color: #286192;
+}
+
+.modal-footer .try-again{
+   background-color: #790400;
+   border-color: #790400;
+}
+
+.modal-footer .try-again:hover{
+    background-color: #460200;
+}
