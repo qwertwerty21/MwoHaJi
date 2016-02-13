@@ -90,6 +90,7 @@ var onEnterBtn = function(){
 			if( valentines === true ){
 				newImg.src = "img/ppval.png"
 			}
+
 		}
 		else{
 			newImg.src = getRandomImg();
