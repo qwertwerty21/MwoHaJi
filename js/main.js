@@ -60,17 +60,21 @@ var PossibleOption = function( insideText ){
 };
 
 var onEnterBtn = function(){
-	if( document.getElementById( "enterPossOptText" ).value === "" ){
+	if( $( "#enterPossOptText" ).val() === "" ){
 		return false;
 	}
 
 	else{
-		var newListItem = document.createElement( "li" );
-		var insideText = document.getElementById( "enterPossOptText" ).value;
-		var newTextNode = document.createTextNode( insideText );
+		var insideText = $( "#enterPossOptText" ).val();
+		
+		var newListItem = $( "<li></li>", { 
+			text: insideText
+		});
+		
+		//var newTextNode = document.createTextNode( insideText );
 
 		//change li color
-		newListItem.style.backgroundColor = "#" + arrayOfBGC[ arrayOfBGCCounter ];
+		newListItem.css( "backgroundColor", "#" + arrayOfBGC[ arrayOfBGCCounter ] );
 		arrayOfBGCCounter += 1;
 
 		if( arrayOfBGCCounter > ( arrayOfBGC.length - 1 ) ){
@@ -78,22 +82,23 @@ var onEnterBtn = function(){
 		}
 
 		//create div element with class col-md-4
-		var newDiv = document.createElement( "div" );
-		newDiv.className += "col-md-3 col-sm-4 col-xs-6";
+		var newDiv = $( "<div></div>" );
+		newDiv.addClass( "col-md-3 col-sm-4 col-xs-6" );
 
 		//create img element and set src and make it uniform
-		var newImg = document.createElement( "img" );
+		var newImg = $( "<img></img>" );
 		//set src op if opactive else get random img
 		if( onePunchActive === true ){
-			newImg.src = "img/op.png"
+			newImg.attr( "src", "img/op.png" );
 
 			if( valentines === true ){
-				newImg.src = "img/ppval.png"
+				newImg.attr( "src", "img/ppval.png" );
 			}
 
 		}
+
 		else{
-			newImg.src = getRandomImg();
+			newImg.attr( "src", getRandomImg() );
 		}
 		
 		$( newImg ).addClass( "img-responsive" );
@@ -102,30 +107,31 @@ var onEnterBtn = function(){
 		arrayOfPossOpt.push( insideText );
 
 		//add text to li
-		newListItem.appendChild( newTextNode );
+		//newListItem.appendChild( newTextNode );
 
 		//add li to div
-		newDiv.appendChild( newListItem );
+		newDiv.append( newListItem );
 
 		//add img to div
-		newDiv.appendChild( newImg );
+		newDiv.append( newImg );
 		
-		newDiv.onclick = function(){ 
-			
+		newDiv.on( "click", function(){
+
 			//delete from array
 			var posOfLIToDelete = arrayOfPossOpt.indexOf( insideText ); 
 			arrayOfPossOpt.splice( posOfLIToDelete, 1 );
-			
+
 			//delete from DOM
-			$( this ).fadeOut( function(){
+			newDiv.fadeOut( function(){
 
-				document.getElementById( "possOptList" ).removeChild( this );
-			});	
-		};
+				newDiv.remove();
+			});
+		});			
 
-		document.getElementById( "possOptList" ).appendChild( newDiv );
+		$( "#possOptList" ).append( newDiv );
+
 	}
-	
+
 }; 
 
 var getRandomImg = function(){
@@ -154,7 +160,7 @@ var onChoose = function(){
 			var theMath = Math.round( Math.random() * totalPossOpt );
 			var theChosenOne = arrayOfPossOpt[ theMath ];
 
-			document.getElementById( "suggestText" ).textContent = theChosenOne;
+			$( "#suggestText" ).text( theChosenOne );
 
 			$( "#suggestModal" ).modal( "show" );
 		}
@@ -182,11 +188,13 @@ var onRetry = function(){
 //pause or play background music
 var onBgmBtn = function(){
 
-	if( document.getElementById( "bgmPlayer" ).paused === true ){
-		document.getElementById( "bgmPlayer" ).play();
+	var bgmPlayer = document.getElementById( "bgmPlayer" );
+
+	if( bgmPlayer.paused === true ){
+		bgmPlayer.play();
 	}
 	else{
-		document.getElementById( "bgmPlayer" ).pause();
+		bgmPlayer.pause();
 	}
 };
 
@@ -217,10 +225,13 @@ var onHeroForFun = function( e ){
 	}, 10000 );
 	
 	if( $( "head link[href='css/onepunch.css']" ).length === 0 ){
-		var linkTag = document.createElement( "link" );
-		linkTag.setAttribute( "rel", "stylesheet" );
-		linkTag.setAttribute( "type", "text/css" );
-		linkTag.setAttribute( "href", "css/onepunch.css" );
+		
+		var linkTag = $( "<link></link>", {
+			rel: "stylesheet",
+			type: "text/css",
+			href: "css/onepunch.css"
+		});
+
 		$( "head" ).append( linkTag );
 	}
 
@@ -246,9 +257,12 @@ var punchPics = function(){
 
 //update music file on page change
 var updateAudioSrc = function( ogg, mp3 ){
-	document.getElementById( "oggSrc" ).src = ogg;
-	document.getElementById( "mp3Src" ).src = mp3;
-	document.getElementById( "bgmPlayer" ).load();
+	
+	var bgmPlayer = document.getElementById( "bgmPlayer" );
+
+	$( "#oggSrc" ).attr( "src", ogg );
+	$( "#mp3Src" ).attr( "src", mp3 );
+	bgmPlayer.load();
 };
 
 //Valentines Day
