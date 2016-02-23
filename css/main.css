@@ -10,7 +10,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
+   html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
@@ -24,7 +24,7 @@ html {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
+ ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
 }
@@ -38,7 +38,7 @@ html {
  * A better looking default horizontal rule
  */
 
-hr {
+ hr {
     display: block;
     height: 1px;
     border: 0;
@@ -53,12 +53,12 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+ audio,
+ canvas,
+ iframe,
+ img,
+ svg,
+ video {
     vertical-align: middle;
 }
 
@@ -66,7 +66,7 @@ video {
  * Remove default fieldset styles.
  */
 
-fieldset {
+ fieldset {
     border: 0;
     margin: 0;
     padding: 0;
@@ -76,7 +76,7 @@ fieldset {
  * Allow only vertical resizing of textareas.
  */
 
-textarea {
+ textarea {
     resize: vertical;
 }
 
@@ -84,7 +84,7 @@ textarea {
    Browser Upgrade Prompt
    ========================================================================== */
 
-.browserupgrade {
+   .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
@@ -95,7 +95,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-.bgm-btn{
+   .bgm-btn{
     float: right;
     position: fixed;
     top: 0;
@@ -194,45 +194,45 @@ li{
     background-color: #6DAF76;
 }
 
-    .modal-header img{
-        border-radius: 20%;
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        width: 80%;
-    }
+.modal-header img{
+    border-radius: 20%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+}
 
-    .modal-header h4{
-        color: #BB342F;
-        font-family: 'Lobster', Georgia, Times, serif;
-        font-size: 3.5em;
-        text-align: center;
-    }
+.modal-header h4{
+    color: #BB342F;
+    font-family: 'Lobster', Georgia, Times, serif;
+    font-size: 3.5em;
+    text-align: center;
+}
 
 .modal-body{
     background-color: #F19C79;
     font-family: 'Lobster', Georgia, Times, serif;
 }
 
-    .modal-body h2{
-        color: #383D3B;
-        font-size: 4em;
-    }
+.modal-body h2{
+    color: #383D3B;
+    font-size: 4em;
+}
 
 .modal-footer{
     background-color: #8F2D56;
 }
 
-    .modal-footer .okay-done{
-        background-color: #80B481;
-    }
+.modal-footer .okay-done{
+    background-color: #80B481;
+}
 
-        .modal-footer .okay-done:hover{
-            background-color: #60a161;
-        }
+.modal-footer .okay-done:hover{
+    background-color: #60a161;
+}
 
 /*ONE PUNCH GIF*/
- 
+
 .opFlash{
     -webkit-animation: flash .1s infinite linear;
     -moz-animation: flash .1s infinite linear;
@@ -304,7 +304,7 @@ li{
  * Hide visually and from screen readers:
  */
 
-.hidden {
+ .hidden {
     display: none !important;
 }
 
@@ -313,7 +313,7 @@ li{
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
 
-.visuallyhidden {
+ .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -330,8 +330,8 @@ li{
  * https://www.drupal.org/node/897638
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+ .visuallyhidden.focusable:active,
+ .visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -344,7 +344,7 @@ li{
  * Hide visually and from screen readers, but maintain layout
  */
 
-.invisible {
+ .invisible {
     visibility: hidden;
 }
 
@@ -360,8 +360,8 @@ li{
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix:before,
-.clearfix:after {
+ .clearfix:before,
+ .clearfix:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
@@ -376,15 +376,30 @@ li{
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (max-width: 1100px) {
+   @media only screen and (max-width: 600px) {
     /* Style adjustments for viewports that meet the condition */
+    li{ 
+        font-size: 2em;
+    }
+
+    .modal-header h4{
+        font-size: 2.5em;
+    }
+
+    .modal-body h2{
+        font-size: 3em;
+    }
+
+    .modal-footer{
+        font-size: .6em;
+    }
 
 }
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -394,13 +409,13 @@ li{
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
-@media print {
+   @media print {
     *,
     *:before,
     *:after {
         background: transparent !important;
         color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+        http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -423,8 +438,8 @@ li{
      * or use the `javascript:` pseudo protocol
      */
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+     a[href^="#"]:after,
+     a[href^="javascript:"]:after {
         content: "";
     }
 
@@ -439,7 +454,7 @@ li{
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
 
-    thead {
+     thead {
         display: table-header-group;
     }
 
