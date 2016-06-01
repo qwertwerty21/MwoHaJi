@@ -43,9 +43,6 @@ var arrayOfBGC = [
 "CF9893"
 ];
 
-var arrayOfOPBGC = [
-
-];
 
 var arrayOfBGCCounter = 0;
 
@@ -54,10 +51,6 @@ var onePunchActive = false;
 var timesAsked = 0;
 
 var valentines;
-
-var PossibleOption = function( insideText ){
-	this.insideText = insideText; 
-};
 
 var onEnterBtn = function(){
 	if( $( "#enterPossOptText" ).val() === "" ){
